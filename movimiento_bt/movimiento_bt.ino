@@ -7,13 +7,13 @@
 
 
 // Motor 1 - Izquierda
-const int MOTOR1_MV1 = 8;     // IN1
-const int MOTOR1_MV2 = 9;     // IN2
+const int MOTOR1_MV1 = 9;     // IN1
+const int MOTOR1_MV2 = 8;     // IN2
 const int MOTOR1_PWM = 10;    // ENA
 
 // Motor 2 - Derecha
-const int MOTOR2_MV1 = 12;    // IN3
-const int MOTOR2_MV2 = 13;    // IN4
+const int MOTOR2_MV1 = 13;    // IN3
+const int MOTOR2_MV2 = 12;    // IN4
 const int MOTOR2_PWM = 11;    // ENB
 
 const int MOTOR_DIR_FORWARD = 0;  
@@ -156,7 +156,7 @@ void move(char dir)
     }
     break;
 
-    case 'a':
+    case 'd':
     {
       motorStart(1, MOTOR_DIR_BACKWARD);    
       setSpeed(1, 240);  
@@ -166,7 +166,7 @@ void move(char dir)
     }
     break;
 
-    case 'd':
+    case 'a':
     {
       motorStart(1, MOTOR_DIR_FORWARD);    
       setSpeed(1, 240);  
