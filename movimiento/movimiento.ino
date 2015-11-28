@@ -19,10 +19,11 @@ const int MOTOR2_PWM = 11;    // ENB
 const int MOTOR_DIR_FORWARD = 0;  
 const int MOTOR_DIR_BACKWARD = 1;
 
-// cons las hace read-only
+// const las hace read-only
 
 // Velocidad
 int spd = 200; // TODO. Variacion de 0-100, con tope.
+// Ahora va sobre 255
 
 
 /* Bloque de inicio */
@@ -132,32 +133,34 @@ void motorStop(char motor_name)
 /* Delante, atras, derecha, izquierda */
 void move(char dir)
 {
+  int velgiro = 200;
+  int vel = 200;
 	switch(dir)
 	{
 		case 'w':
 		{
 			motorStart(1, MOTOR_DIR_FORWARD);    
-			setSpeed(1, 200);  
+			setSpeed(1, vel);  
 			motorStart(2, MOTOR_DIR_FORWARD);        
-			setSpeed(2, 200);
+			setSpeed(2, vel);
 		}
 		break;
 
 		case 's':
 		{
 			motorStart(1, MOTOR_DIR_BACKWARD);    
-			setSpeed(1, 200);  
+			setSpeed(1, vel);  
 			motorStart(2, MOTOR_DIR_BACKWARD);        
-			setSpeed(2, 200);
+			setSpeed(2, vel);
 		}
 		break;
 
 		case 'd':
 		{
 			motorStart(1, MOTOR_DIR_BACKWARD);    
-			setSpeed(1, 240);  
+			setSpeed(1, velgiro);  
 			motorStart(2, MOTOR_DIR_FORWARD);        
-			setSpeed(2, 240);
+			setSpeed(2, velgiro);
 
 		}
 		break;
@@ -165,9 +168,9 @@ void move(char dir)
 		case 'a':
 		{
 			motorStart(1, MOTOR_DIR_FORWARD);    
-			setSpeed(1, 240);  
+			setSpeed(1, velgiro);  
 			motorStart(2, MOTOR_DIR_BACKWARD);        
-			setSpeed(2, 240);
+			setSpeed(2, velgiro);
 		}
 		break;
 	
