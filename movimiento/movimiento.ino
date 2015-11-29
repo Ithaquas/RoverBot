@@ -133,7 +133,7 @@ void motorStop(char motor_name)
 /* Delante, atras, derecha, izquierda */
 void move(char dir)
 {
-  int velgiro = 200;
+  int velgiro = 180;
   int vel = 200;
 	switch(dir)
 	{
