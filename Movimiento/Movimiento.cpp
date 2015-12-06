@@ -21,7 +21,7 @@
 Motor::Motor(char conf)
 {
 	/* Distintas configuraciones de pines */
-	swicht (conf)
+	switch (conf)
 	{
 		case 'A':	// Configuración A
 			_pinConfig = {9, 8, 10, 13, 12, 11};

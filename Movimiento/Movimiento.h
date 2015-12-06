@@ -32,17 +32,17 @@ class Motor
 		int _pinConfig[6];
 
 		// Motor 1 (Izquierda)
-		const int _M1_MV1; // IN1
-		const int _M1_MV2; // IN2
-		const int _M1_PWM;  // ENA
+		int _M1_MV1; // IN1
+		int _M1_MV2; // IN2
+		int _M1_PWM;  // ENA
 
 		// Motor 2 (Derecha)
-		const int _M2_MV1; // IN3
-		const int _M2_MV2; // IN4
-		const int _M1_PWM;  // ENB
+		int _M2_MV1; // IN3
+		int _M2_MV2; // IN4
+		int _M2_PWM;  // ENB
 
-		const int _motorDirForward = 0;  
-		const int _motorDirBackward = 1;
+		int _motorDirForward;	_motorDirForward = 0; 
+		int _motorDirBackward;	_motorDirBackward = 1;
 
 		// cons las hace read-only
 
