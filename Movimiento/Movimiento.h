@@ -41,8 +41,8 @@ class Motor
 		int _M2_MV2; // IN4
 		int _M2_PWM;  // ENB
 
-		int _motorDirForward;	_motorDirForward = 0; 
-		int _motorDirBackward;	_motorDirBackward = 1;
+		int _motorDirForward;
+		int _motorDirBackward;
 
 		// cons las hace read-only
 
