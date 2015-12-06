@@ -17,7 +17,7 @@ void loop()
 {  
   if (Serial.available() > 0)
   {
-    move(Serial.read());
+    motor.move(Serial.read());
     delay(100);
   }
 }  

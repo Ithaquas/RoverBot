@@ -17,6 +17,6 @@ void loop()
 	if (Serial.available() > 0)
 	{
 		int inByte = Serial.read();
-		move(inByte);
+		motor.move(inByte);
 	}
 }  
