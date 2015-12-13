@@ -28,7 +28,7 @@ Motor::Motor(char conf)
 			break;
 
 		default:
-			break:
+			break;
 	}
 
 	_M1_MV1 = _pinConfig[0];		_M2_MV1 = _pinConfig[3];
@@ -46,7 +46,7 @@ Motor::Motor(char conf)
 
 /* FUNCIONES */
 
-// Permite variar la velocidad mediate las salidas PWM 
+// Permite variar la velocidad mediate lasprimary salidas PWM 
 // Rango 0-255
 // TODO_p. Variacion de 0-100, con tope
 void Motor::setSpeed(char _motorName, char _motorSpeed)  
@@ -84,14 +84,14 @@ void Motor::motorStart(char _motorName, char _direction)
 		
 	switch (_direction)  
 	{  
-		case _motorDirForward:  
+		case (_motorDirForward == 1):  
 		{  
 			digitalWrite(_pin_mv1, HIGH);  
 			digitalWrite(_pin_mv2, LOW);            
 		}  
 		break;   
 
-		case _motorDirBackward:  
+		case (_motorDirBackward == 1):  
 		{  
 			digitalWrite(_pin_mv1, LOW);  
 			digitalWrite(_pin_mv2, HIGH);            
