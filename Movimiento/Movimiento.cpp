@@ -72,34 +72,31 @@ void Motor::setSpeed(char _motorName, char _motorSpeed)
 // Hacia delante o hacia atrás, cada lado
 void Motor::motorStart(char _motorName, char _direction)  
 {  
-	char _pinMv1;  
-	char _pinMv2;  
-	 
 	// Asigna el motor que se controla  
 	if (_motorName == 1)  
 	{ 
-		_pin_mv1 = _M1_MV1;  
-		_pin_mv2 = _M1_MV2;  
+		_pinMv1 = _M1_MV1;  
+		_pinMv2 = _M1_MV2;  
 	}     
 	else  
 	{  
-		_pin_mv1 = _M2_MV1;  
-		_pin_mv2 = _M2_MV2;  
+		_pinMv1 = _M2_MV1;  
+		_pinMv2 = _M2_MV2;  
 	}  
 		
 	switch (_direction)  
 	{  
 		case (_motorDirForward == 1):  
 		{  
-			digitalWrite(_pin_mv1, HIGH);  
-			digitalWrite(_pin_mv2, LOW);            
+			digitalWrite(_pinMv1, HIGH);  
+			digitalWrite(_pinMv2, LOW);            
 		}  
 		break;   
 
 		case (_motorDirBackward == 1):  
 		{  
-			digitalWrite(_pin_mv1, LOW);  
-			digitalWrite(_pin_mv2, HIGH);            
+			digitalWrite(_pinMv1, LOW);  
+			digitalWrite(_pinMv2, HIGH);            
 		}  
 		break;           
 	} 	

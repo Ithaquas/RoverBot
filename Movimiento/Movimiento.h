@@ -47,6 +47,9 @@ class Motor
 		// cons las hace read-only
 
 		int _speed; // Velocidad (0-255) 
+
+		char _pinMv1;  
+		char _pinMv2;  
 };
 
 
