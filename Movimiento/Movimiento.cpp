@@ -24,28 +24,34 @@ Motor::Motor(char conf)
 	switch (conf)
 	{
 		case 'A':	// Configuración A
-			_pinConfig[0] = 9;
-			_pinConfig[1] = 8;
-			_pinConfig[2] = 10;
-			_pinConfig[3] = 13;
-			_pinConfig[4] = 12;
-			_pinConfig[5] = 11;
+			_pinConfig[0] = 13; // IN1
+			_pinConfig[1] = 12;	// IN2
+			_pinConfig[2] = 11;	// ENA
+			_pinConfig[3] = 9;	// IN3
+			_pinConfig[4] = 8;	// IN4
+			_pinConfig[5] = 10;	// ENB
 			break;
 
 		default:
 			break;
 	}
 
-	_M1_MV1 = _pinConfig[0];		_M2_MV1 = _pinConfig[3];
-	_M1_MV2 = _pinConfig[1];		_M2_MV1 = _pinConfig[4];
-	_M1_PWM = _pinConfig[2];		_M1_PWM = _pinConfig[5];
+	_M1_MV1 = _pinConfig[0];
+	_M1_MV2 = _pinConfig[1];
+	_M1_PWM = _pinConfig[2];
+	_M2_MV1 = _pinConfig[3];
+	_M2_MV2 = _pinConfig[4];
+	_M1_PWM = _pinConfig[5];
 
 	_motorDirForward = 0;
 	_motorDirBackward = 1;
 
-	pinMode(_M1_MV1, OUTPUT);		pinMode(_M2_MV1, OUTPUT);
-	pinMode(_M1_MV2, OUTPUT);		pinMode(_M2_MV2, OUTPUT); 
-	pinMode(_M1_PWM, OUTPUT);		pinMode(_M2_PWM, OUTPUT);  
+	pinMode(_M1_MV1, OUTPUT);
+	pinMode(_M2_MV1, OUTPUT);
+	pinMode(_M1_MV2, OUTPUT);
+	pinMode(_M2_MV2, OUTPUT); 
+	pinMode(_M1_PWM, OUTPUT);
+	pinMode(_M2_PWM, OUTPUT);  
 }
 
 
@@ -59,11 +65,11 @@ void Motor::setSpeed(char _motorName, char _motorSpeed)
 	// Asigna el motor que se controla  
 	 if (_motorName == 1)  
 	 {  
-			analogWrite(_M1_PWM, _motorSpeed);  
+		analogWrite(_M1_PWM, _motorSpeed);  
 	 }     
 	 else  
 	 {  
-			analogWrite(_M2_PWM, _motorSpeed);  
+		analogWrite(_M2_PWM, _motorSpeed);  
 	 }  
 }
 
@@ -78,22 +84,28 @@ void Motor::motorStart(char _motorName, char _direction)
 		_pinMv1 = _M1_MV1;  
 		_pinMv2 = _M1_MV2;  
 	}     
-	else  
+	else if(_motorName == 2)  
 	{  
-		_pinMv1 = _M2_MV1;  
+		_pinMv1 = _M2_MV1;
+		Serial.println(_pinMv1);
+		Serial.println(_pinMv2);
 		_pinMv2 = _M2_MV2;  
 	}  
+	else
+	{
+		Serial.print("Kaput");
+	}
 		
 	switch (_direction)  
 	{  
-		case (_motorDirForward == 1):  
+		case (0):  
 		{  
 			digitalWrite(_pinMv1, HIGH);  
 			digitalWrite(_pinMv2, LOW);            
 		}  
 		break;   
 
-		case (_motorDirBackward == 1):  
+		case (1):  
 		{  
 			digitalWrite(_pinMv1, LOW);  
 			digitalWrite(_pinMv2, HIGH);            
@@ -143,7 +155,7 @@ void Motor::move(char _direction)
 		}
 		break;
 
-		case 'd':
+		case 'a':
 		{
 			motorStart(1, _motorDirBackward);    
 			setSpeed(1, 180);  
@@ -153,7 +165,7 @@ void Motor::move(char _direction)
 		}
 		break;
 
-		case 'a':
+		case 'd':
 		{
 			motorStart(1, _motorDirForward);    
 			setSpeed(1, 180);  

@@ -3,7 +3,6 @@
 
 Motor motor('A');
 
-
 /* Bloque de inicio */
 void setup()  
 {  
