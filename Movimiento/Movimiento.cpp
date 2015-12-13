@@ -24,7 +24,12 @@ Motor::Motor(char conf)
 	switch (conf)
 	{
 		case 'A':	// Configuración A
-			_pinConfig = {9, 8, 10, 13, 12, 11};
+			_pinConfig[0] = 9;
+			_pinConfig[1] = 8;
+			_pinConfig[2] = 10;
+			_pinConfig[3] = 13;
+			_pinConfig[4] = 12;
+			_pinConfig[5] = 11;
 			break;
 
 		default:
