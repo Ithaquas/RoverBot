@@ -1,5 +1,5 @@
 Motor 		KEYWORD1
 setSpeed	KEYWORD2
-motorStart	KEYWORD3
-motorStop	KEYWORD4
-move		KEYWORD5
+motorStart	KEYWORD2
+motorStop	KEYWORD2
+move		KEYWORD2
