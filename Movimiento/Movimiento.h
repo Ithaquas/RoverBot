@@ -9,7 +9,7 @@
 
 
 #ifndef Movimiento_h // Evita problemas si alguien importa dos veces
-#define Movimiento_h // Evita problemas si alguien importa dos veces
+#define Movimiento_h // Evitroblemas si alguien importa dos veces
 
 #include "Arduino.h" // Acceso a los tipos de datos y constantes de Arduino
 
@@ -20,7 +20,7 @@
 class Motor
 {
 	public:
-		// Instancia Motor, en el se indica la configuración de pines
+		// Instancia Motor, en el se indica la configuracion de pines
 		Motor(char conf);
 
 		void setSpeed(char motorName, char motorSpeed);
