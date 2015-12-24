@@ -1,0 +1,2 @@
+Ultrasonidos	KEYWORD1
+distancia		KEYWORD2
