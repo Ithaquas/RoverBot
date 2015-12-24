@@ -1,5 +1,5 @@
 /*
-  Movimiento.h - Biblioteca para el movimietno del RoverBot.
+  MovimientoRB.h - Biblioteca para el movimietno del RoverBot.
   Created by Ithaquas, December, 2015.
   Released into the public domain.
 */
@@ -8,8 +8,8 @@
 // Este es el header file
 
 
-#ifndef Movimiento_h // Evita problemas si alguien importa dos veces
-#define Movimiento_h // Evitroblemas si alguien importa dos veces
+#ifndef MovimientoRB_h // Evita problemas si alguien importa dos veces
+#define MovimientoRB_h // Evitroblemas si alguien importa dos veces
 
 #include "Arduino.h" // Acceso a los tipos de datos y constantes de Arduino
 

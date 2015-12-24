@@ -1,5 +1,5 @@
 /*
-  SensoresRoverBot.h - Biblioteca para el uso de los sensores de RoverBot.
+  SensoresRB.h - Biblioteca para el uso de los sensores de RoverBot.
   Created by Ithaquas, December, 2015.
   Released into the public domain.
 */
@@ -7,8 +7,8 @@
 
 // Este es el header file
 
-#ifndef SensoresRoverBot_h // Evita problemas si alguien importa dos veces
-#define SensoresRoverBot_h // Evita problemas si alguien importa dos veces
+#ifndef SensoresRB_h // Evita problemas si alguien importa dos veces
+#define SensoresRB_h // Evita problemas si alguien importa dos veces
 
 #include "Arduino.h" // Acceso a los tipos de datos y constantes de Arduino
 
