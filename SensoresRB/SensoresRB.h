@@ -29,7 +29,7 @@ class Ultrasonido
 		int _Echo;
 
 		long _distancia;
-		long _durancion;
+		long _duracion;
 };
 
 

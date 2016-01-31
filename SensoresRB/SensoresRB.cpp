@@ -40,8 +40,8 @@ int Ultrasonido::distancia()
   delayMicroseconds(10);
   digitalWrite(_Trig ,LOW); // Se interrumpe el pulso 
   
-  _duracion = pulseIn(Echo, HIGH); // Cuenta el tiempo que transcurre hasta la recepcion
-  _distancia = (duracion/2)/29.1;	// Factor de converisón para obtener distancia en cm
+  _duracion = pulseIn(_Echo, HIGH); // Cuenta el tiempo que transcurre hasta la recepcion
+  _distancia = (_duracion/2)/29.1;	// Factor de converisón para obtener distancia en cm
 
   return(_distancia);
 }
