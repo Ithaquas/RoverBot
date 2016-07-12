@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+#include <MovimientoRB.h>
+
+
+Motor motor('A');
+
+>>>>>>> 1948909592b9f029330d6aff26916f8cd89b8689
 /* Bloque de inicio */
 void setup()  
 {  

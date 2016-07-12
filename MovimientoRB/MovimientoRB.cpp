@@ -1,5 +1,5 @@
 /*
-  Movimiento.cpp - Biblioteca para el movimietno del RoverBot.
+  MovimientoRB.cpp - Biblioteca para el movimietno del RoverBot.
   Created by Ithaquas, December, 2015.
   Released into the public domain.
 */
@@ -9,7 +9,7 @@
 
 
 #include "Arduino.h"
-#include "Movimiento.h"
+#include "MovimientoRB.h"
 
 
 /*
