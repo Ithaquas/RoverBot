@@ -17,7 +17,7 @@
 	Indica lo que debe suceder cuando alguien crea
 	una instancia de la clase
 */
-Ultrasonido::Ultrasonido(int Trig, int Echo)
+ultrasonido::ultrasonido(int Trig, int Echo)
 {
 	_Trig = Trig;
 	_Echo = Echo;
@@ -31,7 +31,7 @@ Ultrasonido::Ultrasonido(int Trig, int Echo)
 /* FUNCIONES DE ULTRASONIDO */
 
 // Devuelve distancia en cm
-int Ultrasonido::distancia()
+int ultrasonido::distancia()
 {
   digitalWrite(_Trig, LOW); // Estabiliza el pulso y apaga el disparador
   delayMicroseconds(5);
